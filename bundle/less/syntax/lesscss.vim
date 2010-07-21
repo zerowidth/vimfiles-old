@@ -17,7 +17,7 @@ if !exists("main_syntax")
   elseif exists("b:current_syntax")
   finish
 endif
-  let main_syntax = 'less'
+  let main_syntax = 'lesscss'
 endif
 
 syn case ignore
