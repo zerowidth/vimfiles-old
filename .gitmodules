@@ -1,6 +1,3 @@
-[submodule "snippets"]
-	path = snippets
-	url = git://github.com/aniero/snipmate-snippets.git
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
