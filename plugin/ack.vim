@@ -29,7 +29,7 @@ function! s:Ack(cmd, args)
     try
         let &grepprg=g:ackprg
         let &grepformat=g:ackformat
-        silent execute a:cmd . " " . a:args
+        silent execute a:cmd . "! " . a:args
     finally
         let &grepprg=grepprg_bak
         let &grepformat=grepformat_bak
