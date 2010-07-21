@@ -225,8 +225,16 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
 
-"map to fuzzy finder text mate stylez
-nnoremap <c-f> :FuzzyFinderTextMate<CR>
+" from the fuzzyfinder docs:
+nnoremap <silent> <C-n>      :FufBuffer<CR>
+" nnoremap <silent> <C-f>p     :FufFile<CR>
+" nnoremap <silent> <C-f>f     :FufFile<CR>
+" nnoremap <silent> <C-f>     :FufFile<CR>
+" nnoremap <silent> <C-f><C-t> :FufTag<CR>
+" nnoremap <silent> <C-f>t     :FufTag!<CR>
+noremap  <silent> g]         :FufTagWithCursorWord!<CR>
+
+noremap <silent> <C-f> :CommandT<CR>
 
 "map Q to something useful
 noremap Q gq
