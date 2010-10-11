@@ -196,10 +196,6 @@ set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
-"load ftplugins and indent files
-filetype plugin on
-filetype indent on
-
 "turn on syntax highlighting
 syntax on
 
@@ -260,6 +256,7 @@ let g:syntastic_enable_signs=1
 "     call ExtractSnips("~/.vim/snippets/html", "xhtml")
 "     call ExtractSnips("~/.vim/snippets/html", "php")
 " endfunction
+let g:snippets_dir="~/.vim/bundle/snipmate/snippets"
 
 "visual search mappings
 function! s:VSetSearch()
@@ -297,6 +294,10 @@ function! s:HighlightLongLines(width)
 endfunction
 call pathogen#runtime_append_all_bundles()
 
+"load ftplugins and indent files
+filetype off
+filetype plugin on
+filetype indent on
 
 " ********************************************************************************
 " ********************************************************************************
@@ -325,9 +326,6 @@ let g:NERDTreeIgnore = ['\~$', '^tags$']
 " let NERDTreeChDirMode=2 " auto-change CWD when changing tree root
 command -n=? -complete=dir NT NERDTreeToggle <args>
 command NTStart NERDTree | wincmd l
-
-au VimEnter * NTStart
-" au TabLeave * call s:nerd_close()
 
 let g:NERDSpaceDelims = 1 " include space in comments
 
