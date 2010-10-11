@@ -416,6 +416,7 @@ set splitright
 
 " strip leading tabs and trailing whitespace
 command Tr %s/\s\+$//ge | %s/\t/  /ge | nohlsearch
+command FixHashes %s/\(\S\)=>\(\S\)/\1 => \2/ge | %s/\t/  /ge | nohlsearch
 
 " set directory=~/.vimswap
 " livin' on the edge!
