@@ -21,7 +21,10 @@ inoremap <D-l> <C-O>:nohlsearch<CR>
 " from atmos
 nnoremap <D-r> :NERDTreeToggle<CR>
 " 'reveal in project' a la textmate
-nnoremap <D-R> :NERDTreeFind<CR>
+" nnoremap <D-R> :NERDTreeFind<CR>
+" open the nerd tree window first, in CWD, so the find doesn't change
+" the tree root.
+nnoremap <D-R> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
 map <D-j> gt
 map <D-k> gT
