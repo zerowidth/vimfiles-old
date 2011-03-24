@@ -487,8 +487,9 @@ set autoread
 " augroup vimrcAu
 "   au!
 "   au BufEnter,BufNew Test.log setlocal autoread
-" augroup END 
+" augroup END
 
 set tags=./tags,tags
 
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
