@@ -183,7 +183,8 @@ set nofoldenable        "dont fold by default
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+" set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore=*.o,*.obj,*~,pkg/*
 
 "display tabs and trailing spaces
 set list
@@ -325,17 +326,17 @@ let g:NERDTreeMapOpenSplit = 'i'
 let g:NERDTreeIgnore = ['\~$', '^tags$']
 " let NERDTreeChDirMode=2 " auto-change CWD when changing tree root
 command -n=? -complete=dir NT NERDTreeToggle <args>
-command NTStart NERDTree | wincmd l
+" au TabLeave * call s:nerd_close()
 
 let g:NERDSpaceDelims = 1 " include space in comments
-
-let g:fuzzy_ignore = "gems*;pkg/*"
 
 " command Rescan :ruby finder.rescan!
 let mapleader=','
 map <silent> <Leader>r :echo 'refreshing tags and files...'<CR>:silent !ctags -R<CR>:silent CommandTFlush<CR>:echo 'refreshed tags and files'<CR>
 
 let g:CommandTMatchWindowAtTop=1
+" let g:fuzzy_ignore = "gems*;pkg/*"
+" for commandt ignores, see: wildignore
 
 " tab movement setup
 " all this tab mojo is from ara.t.howard

@@ -29,6 +29,3 @@ nnoremap <D-R> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 map <D-j> gt
 map <D-k> gT
 
-au VimEnter * NTStart
-" au TabLeave * call s:nerd_close()
-
