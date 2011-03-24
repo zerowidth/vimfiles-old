@@ -409,6 +409,10 @@ colorscheme molokai
 
 set number
 
+" Disable audible bell by enabling visual bell
+" Fortunately, no visual bell is displayed in macvim or iterm.
+set vb
+
 " from evilchelu
 nnoremap gb '[V']
 
