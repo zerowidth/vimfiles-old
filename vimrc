@@ -240,6 +240,9 @@ noremap Q gq
 "make Y consistent with C and D
 nnoremap Y y$
 
+" easy escape
+imap jj <Esc>
+
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 
