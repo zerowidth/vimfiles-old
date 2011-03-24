@@ -191,6 +191,7 @@ set list
 set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 set formatoptions-=o "dont continue comments when pushing o/O
+set nojoinspaces
 
 "vertical/horizontal scroll off settings
 set scrolloff=3
