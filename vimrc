@@ -404,7 +404,8 @@ map <C-Right> :call TabMove(0)<CR>
 
 " everything else...
 
-colorscheme desert " make it look nice in terminal.app
+" colorscheme desert " make it look nice in terminal.app
+colorscheme molokai
 
 set number
 
