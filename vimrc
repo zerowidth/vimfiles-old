@@ -211,9 +211,14 @@ set t_Co=256
 "hide buffers when not displayed
 set hidden
 
-"dont load csapprox if we no gui support - silences an annoying warning
 if !has("gui")
-    let g:CSApprox_loaded = 1
+  "dont load csapprox if we no gui support - silences an annoying warning
+  let g:CSApprox_loaded = 1
+
+  " set custom cursor -- vertical bar in insert mode (iTerm2)
+  " from http://www.iterm2.com/#/section/documentation/escape_codes
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
 "make <c-l> clear the highlight as well as redraw
