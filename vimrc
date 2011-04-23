@@ -433,6 +433,10 @@ set splitright
 command Tr %s/\s\+$//ge | %s/\t/  /ge | nohlsearch
 command FixHashes %s/\(\S\)=>\(\S\)/\1 => \2/ge | %s/\t/  /ge | nohlsearch
 
+" from http://stackoverflow.com/questions/676600/vim-replace-selected-text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+vnoremap <C-a> "hy:Ack <C-r>h
+
 " set directory=~/.vimswap
 " livin' on the edge!
 set noswapfile
